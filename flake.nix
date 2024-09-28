@@ -8,12 +8,15 @@
   };
 
   outputs = { nixpkgs, ... }: let 
-    cartographcf = nixpkgs.pkgs.stdenv.mkDerivation {
+    pkgs = import nixpkgs { system = "x86_64-linux"; };
+    cartographcf = pkgs.stdenv.mkDerivation {
       pname   = "CartographCF";
       version = "1.0";
 
+      src = ./source;
+
       installPhase = ''
-        install -Dm444 ./source/* -t $out/share/fonts/
+        install -Dm444 truetype/* -t $out/share/fonts/truetype
       '';
     };
   in {
