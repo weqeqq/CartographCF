@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs = {
-      url = "git+ssh://git@github.com/nixos/nixpkgs?ref=nixos-unstable";
+      url = "github:nixos/nixpkgs/nixos-unstable";
     };
   };
 
@@ -16,7 +16,7 @@
       src = ./source;
 
       installPhase = ''
-        install -Dm444 truetype/* -t $out/share/fonts/truetype
+        install -Dm444 opentype/* -t $out/share/fonts/opentype
       '';
     };
   in {
