@@ -12,8 +12,6 @@
       pname   = "CartographCF";
       version = "1.0";
 
-      src = ./source;
-
       installPhase = ''
         install -Dm444 ./source/* -t $out/share/fonts/
       '';
