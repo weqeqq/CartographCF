@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs = {
-      url = "git+ssh://git@github.com/nixos/nixpkgs/nixos-unstable";
+      url = "git+ssh://git@github.com/nixos/nixpkgs?ref=nixos-unstable";
     };
   };
 
